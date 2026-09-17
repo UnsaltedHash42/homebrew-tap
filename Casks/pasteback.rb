@@ -7,7 +7,7 @@ cask "pasteback" do
   desc "Local-first, encrypted clipboard history for the menu bar"
   homepage "https://github.com/UnsaltedHash42/PasteBack"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Pasteback.app"
 
