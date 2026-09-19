@@ -5,7 +5,14 @@ Install Pasteback (clipboard history for macOS):
     brew install --cask UnsaltedHash42/tap/pasteback
     xattr -dr com.apple.quarantine /Applications/Pasteback.app
 
-The second command is required for now. Homebrew 7 removed the
+The cask also installs the `pasteback` command line tool:
+
+    pasteback list [count] [--json]    # last N clipboard items, newest first
+    pasteback get <index>              # print one item's full content
+
+The CLI requires the Pasteback app to be running.
+
+The `xattr` command is required for now. Homebrew 7 removed the
 `--no-quarantine` flag and quarantines every cask download; the app is
 adhoc-signed (not Developer-ID signed or notarized), and macOS runs
 quarantined un-notarized apps with restricted capabilities — clipboard reads
